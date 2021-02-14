@@ -1,0 +1,4 @@
+ INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES (('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),('vasu', 'naveen. Erichsen', 'bengulure 37', 'bengulure', '560037', 'karanatak'),(Wolski,'Zbyszek','ul. Filtrowa','68', 'Walla','01-012','Poland'));
+
+insert the values upto 10 values 

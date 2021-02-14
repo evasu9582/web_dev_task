@@ -1,0 +1,17 @@
+Monitoring Server Load with the ‘top’ command
+
+>>>top
+
+Using ‘free -m’ command to monitor the Physical Memory usage
+
+>>>free -m
+
+We can check the current disk usage by running the following command.
+
+>>>iostat -x 1 10
+
+You can view the process list with the help of the following command.
+
+>>>ps auxf
+
+

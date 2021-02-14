@@ -1,0 +1,13 @@
+🤫️ to get auto restart apache if in case too much load on apache
+
+#!/bin/bash
+MAXLOAD=6
+check=$(uptime | awk -F'average: ' '{print $2}' | awk '{print $1}' | tr -d ',')
+if [[ $check > $MAXLOAD ]]; then
+	/sbin/service httpd stop
+	HOST=`hostname`
+	echo $HOST | mailx -s "$HOST load alert - apache STOPPED by cron script" load.alert@your.domain
+	sleep 300
+	/sbin/service httpd start
+	echo $HOST | mailx -s "$HOST load alert - apache STARTED by cron script" load.alert@your.domain
+fi
